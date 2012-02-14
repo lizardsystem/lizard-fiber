@@ -11,6 +11,7 @@ long_description = '\n\n'.join([
 
 install_requires = [
     'Django',
+    'django-fiber',
     'django-extensions',
     'django-nose',
     'lizard-ui >= 3.0',
