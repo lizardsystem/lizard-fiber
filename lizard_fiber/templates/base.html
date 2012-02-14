@@ -1,0 +1,61 @@
+{% extends "lizard_ui/lizardbase.html" %}
+{% load i18n fiber_tags mptt_tags %}
+
+{% block header %}
+  <header class="container">
+    <div class="row">
+      <div class="span3">
+        {% block logo %}
+          <a href="/"
+             class="brand"
+             title="{% trans 'Back to homepage' %}"
+             ><img src="{{ STATIC_URL }}lizard_ui/logo.png"
+                   alt="Lizard" /></a>
+        {% endblock logo %}
+      </div>
+      <div class="span9">
+        <div class="row">
+          {% block header_top_row %}
+            {{ block.super }}
+          {% endblock header_top_row %}
+        </div>
+        <div class="row">
+          {% block header_bottom_row %}
+            {{ block.super }}
+          {% endblock header_bottom_row %}
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock header %}
+
+
+{% block main_area %}
+  <div id="main_area"
+       class="container">
+    <div class="row">
+      <div id="sidebar" class="span3">
+        {% block sidebar %}
+          <div class="sidebar-nav">
+            {% show_menu "mainmenu" 1 2 %}
+          </div>
+        {% endblock sidebar %}
+      </div>
+      {# End of sidebar #}
+
+      <div id="main" class="span6">
+        {% block content_block %}
+          {% show_page_content "main_content" %}
+          &nbsp;
+        {% endblock content_block %}
+      </div>
+      <div id="main" class="span3">
+        {% block right_column_block %}
+          {% show_page_content "right_column_content" %}
+          &nbsp;
+        {% endblock right_column_block %}
+      </div>
+    </div>
+  </div>
+  {# End of main_area #}
+{% endblock main_area %}
