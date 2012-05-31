@@ -41,6 +41,7 @@ SITE_ID = 1
 INSTALLED_APPS = [
     'lizard_fiber',
     'lizard_ui',
+    'lizard_security',
     'staticfiles',
     'compressor',
     'south',
