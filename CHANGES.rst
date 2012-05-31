@@ -5,4 +5,6 @@ Changelog of lizard-fiber
 0.1 (unreleased)
 ----------------
 
-- Initial library skeleton created by nensskel.  [your name]
+- Added tiny wrapper for fiber, mostly templates.
+
+- Initial library skeleton created by nensskel.
